@@ -1,1 +1,3 @@
 # project-3
+## Dog Adoption Outcomes
+<p> In this project we want to analyze the outcomes of dogs in shelters, in hopes to create a predictive model on the likilihood of a dog getting adopted. Using data from Austin Animal Center and Family Dogs New Life Dog Shelter, we can build a model that will predict a dog's outcome based off of their age, breed, color, and gender. The goal is to build this model and have it as a tool for shelters to use to help make intake decisions. Another goal is to have this be a universal database for shelters to enter their outcome data, so that the predictive model can become stronger. There is a huge lacking in accessible adoption outcome data and this project will provide the database needed to fill this void.
