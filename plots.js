@@ -1,10 +1,10 @@
 // Initializes the page with a default plot
 function init() {
-    d3.csv("2019_data.csv").then(function(data19){
+    d3.csv("name of csv").then(function(dogData){
         dates = [];
         values = [];
         i = 0;
-        data19.forEach(function(d){
+        dogData.forEach(function(d){
             dates[i] = d3.timeParse("%Y-%m-%d")(d.date);
             values[i] = +d.guns;
             i++;
