@@ -6,7 +6,6 @@ import numpy as np
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
-
 # prediction function 
 @app.route("/")
 def home():
