@@ -1,0 +1,67 @@
+<html>
+<body>
+    <h3>Dog Prediction Form</h3>
+
+<div>
+  <form action="{{ url_for('predict') }}" method="post"></form>
+
+    <label for="PetBreed">PetBreed</label>
+      <select id="PetBreed" name="PetBreed">
+        <option value="0">AFFENPINSCHER</option>
+        <option value="1">AIREDALE TERRIER</option>
+        <option value="2">AKITA</option>
+        <option value="3">ALASKAN HUSKY</option>
+        <option value="4">ALASKAN KLEE KAI</option>
+        <option value="5">ALASKAN MALAMUTE</option>
+      </select>
+    <br>
+    <label for="PrimaryColor">PrimaryColor</label>
+      <select id="PrimaryColor" name="PrimaryColor">
+        <option value="0">APRICOT</option>
+        <option value="1">BEIGE</option>
+        <option value="2">BLACK BRINDLE<BLACK/option>
+        <option value="3">BLACK SMOKE</option>
+        <option value="4">BLACK TIGER</option>
+        <option value="5">BLOND</option>
+      </select>  
+    <br>
+    <label for="BreedCategory">BreedCategory</label>
+      <select id="BreedCategory" name="BreedCategory">
+        <option value="0">Mix</option>
+        <option value="1">Pure</option>
+        <option value="2">Two</option>   
+      </select>
+    <br>
+    <label for="IntakeStatus">IntakeStatus</label>
+    <select id="IntakeStatus" name="eIntakeStatusdu">
+      <option value="1">Normal</option>
+      <option value="0">Aggressive</option>
+      <option value="3">Pregnant</option>
+      <option value="4">Sick</option>
+      <option value="2">Other</option>
+     </select>
+    <br>
+    <label for="PetAgeCategory">PetAgeCategory</label>
+    <select id="PetAgeCategory" name="PetAgeCategory">
+      <option value="1">Baby</option>
+      <option value="3">Young</option>
+      <option value="0">Adult</option>
+      <option value="2">Senior</option>
+    </select>
+    <br>
+    <label for="Sex">Sex</label>
+    <select id="Sex" name="Sex">
+      <option value="1">Male</option>
+      <option value="0">Female</option>
+
+    </select>
+      
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+{{ prediction }}  
+</div>
+</body>
+</html>
