@@ -1,1 +1,0 @@
-<p>This is the base code for my portfolio</p>
