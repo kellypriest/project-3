@@ -112,3 +112,4 @@ node_modules/
 # configuration files
 config.py
 config.js
+connect.js
