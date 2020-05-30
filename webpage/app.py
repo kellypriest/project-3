@@ -32,7 +32,7 @@ def result():
         if int(result)== 1: 
             prediction ='Take'
         else: 
-            prediction ='No'            
+            prediction ='At risk of euthanisa'            
         return render_template("result.html", prediction = prediction) 
 
 if __name__ == '__main__':
