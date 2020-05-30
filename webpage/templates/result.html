@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dog Intake Model</title>
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <h3 id="Logo">Project 3 group</h3>
+    <a class="link1" href="{{ url_for('index') }}">
+        <h3 class="aboutMe">INTAKE FORM</h3>
+    </a>
+    <a class="link1" href="{{ url_for('home') }}">
+    <img class="hamburger" src="../static/img/hamburger1.png" alt="hamburger">
+    </a>
+</nav>
+</header>
+<div class="slider"></div>
+<center><section> 
+  <h1 class="resultPretty"> {{ prediction }}</h1> 
+  <input class="moveSide" type="button" value="Return to Homepage" onclick="history.back(-1)" />
+</section> </center>
+</body>
+</html>
