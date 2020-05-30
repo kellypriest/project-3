@@ -21,19 +21,15 @@ function makePlot(){
 
   if (dataset === "breeds") {
     csv_path = "graphing_csvs/breeds.csv"
-    var groups = d3.map(data, function(d){return(d.PrimaryBreed)}).keys()
   }
   else if (dataset === "gender") {
     csv_path = "graphing_csvs/gender.csv"
-    var groups = d3.map(data, function(d){return(d.Sex)}).keys()
   }
   else if (dataset === "age group") {
     csv_path = "graphing_csvs/age_group.csv"
-    var groups = d3.map(data, function(d){return(d["Age Group"])}).keys()
   }
   else if (dataset === "color") {
     csv_path = "graphing_csvs/colors.csv"
-    var groups = d3.map(data, function(d){return(d.PrimaryColor)}).keys()
   }
   else {
     console.log("error")
@@ -44,6 +40,23 @@ function makePlot(){
 
   // List of subgroups = header of the csv files = soil condition here
     var subgroups = [data.Adoption, data.Transfer, data.Foster, data.Euthanasia]
+
+    if (dataset === "breeds") {
+      var groups = d3.map(data, function(d){return(d.PrimaryBreed)}).keys()
+    }
+    else if (dataset === "gender") {
+      var groups = d3.map(data, function(d){return(d.Sex)}).keys()
+    }
+    else if (dataset === "age group") {
+      var groups = d3.map(data, function(d){return(d["Age Group"])}).keys()
+    }
+    else if (dataset === "color") {
+      var groups = d3.map(data, function(d){return(d.PrimaryColor)}).keys()
+    }
+    else {
+      console.log("error")
+    }
+
 
   // Add X axis
     var x = d3.scaleBand()
