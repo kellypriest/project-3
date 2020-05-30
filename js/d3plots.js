@@ -1,227 +1,93 @@
-// Initializes the page with a default plot
-function init() {
-    d3.csv("graphing_csvs/breeds.csv").then(function(dogData){
-        breeds = [];
-        adoption = [];
-        euthanasia = [];
-        transfer = [];
-        foster = [];
-        i = 0;
-        dogData.forEach(function(d){
-            breeds[i] = d.PrimaryBreed;
-            adoption[i] = d.Adoption;
-            euthanasia[i] = d.Euthanasia;
-            transfer[i] = d.Transfer;
-            foster[i] = d.Foster;
-            i++;
-        });
-       
-        var trace1 = {
-          x: breeds,
-          y: adoption,
-          name: 'Adoption',
-          type: 'bar'
-        };
-        
-        var trace2 = {
-          x: breeds,
-          y: euthanasia,
-          name: 'Euthanasia',
-          type: 'bar'
-        };
-        var trace3 = {
-          x: breeds,
-          y: transfer,
-          name: 'Transfer',
-          type: 'bar'
-        };
-        var trace4 = {
-          x: breeds,
-          y: foster,
-          name: 'Foster',
-          type: 'bar'
-        };
-        
-        var data = [trace1, trace2, trace3, trace4];
-        
-        var layout = {barmode: 'stack'};
-        
-        Plotly.newPlot('myDiv', data, layout);
-    })
-  }
-  
-  // Call updatePlotly() when a change takes place to the DOM
-  d3.selectAll("#selDataset").on("change", updatePlotly);
-  
-  // This function is called when a dropdown menu item is selected
-  function updatePlotly() {
-    // Use D3 to select the dropdown menu
-    var dropdownMenu = d3.select("#selDataset");
-    // Assign the value of the dropdown menu option to a variable
-    var dataset = dropdownMenu.property("value");
-  
-  
-    if (dataset === 'breeds') {
-      init();
-    }
-  
-    if (dataset === 'age') {
-      d3.csv("graphing_csvs/age_group.csv").then(function(dogData){
-        age_group = [];
-        adoption = [];
-        euthanasia = [];
-        transfer = [];
-        foster = [];
-        i = 0;
-        dogData.forEach(function(d){
-            age_group[i] = d['Age Group'];
-            adoption[i] = d.Adoption;
-            euthanasia[i] = d.Euthanasia;
-            transfer[i] = d.Transfer;
-            foster[i] = d.Foster;
-            i++;
-        });
-       
-        var trace1 = {
-          x: age_group,
-          y: adoption,
-          name: 'Adoption',
-          type: 'bar'
-        };
-        
-        var trace2 = {
-          x: age_group,
-          y: euthanasia,
-          name: 'Euthanasia',
-          type: 'bar'
-        };
-        var trace3 = {
-          x: age_group,
-          y: transfer,
-          name: 'Transfer',
-          type: 'bar'
-        };
-        var trace4 = {
-          x: age_group,
-          y: foster,
-          name: 'Foster',
-          type: 'bar'
-        };
-        
-        var data = [trace1, trace2, trace3, trace4];
-        
-        var layout = {barmode: 'stack'};
-        // figure out how to restyle plots
-        // Plotly.newPlot('myDiv', data, layout);
-    })
-    }
+// set the dimensions and margins of the graph
+var margin = {top: 10, right: 30, bottom: 20, left: 50},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
-    if (dataset === 'gender') {
-      d3.csv("graphing_csvs/gender.csv").then(function(dogData){
-        gener = [];
-        adoption = [];
-        euthanasia = [];
-        transfer = [];
-        foster = [];
-        i = 0;
-        dogData.forEach(function(d){
-            gender[i] = d.Sex;
-            adoption[i] = d.Adoption;
-            euthanasia[i] = d.Euthanasia;
-            transfer[i] = d.Transfer;
-            foster[i] = d.Foster;
-            i++;
-        });
-       
-        var trace1 = {
-          x: gender,
-          y: adoption,
-          name: 'Adoption',
-          type: 'bar'
-        };
-        
-        var trace2 = {
-          x: gender,
-          y: euthanasia,
-          name: 'Euthanasia',
-          type: 'bar'
-        };
-        var trace3 = {
-          x: gender,
-          y: transfer,
-          name: 'Transfer',
-          type: 'bar'
-        };
-        var trace4 = {
-          x: gender,
-          y: foster,
-          name: 'Foster',
-          type: 'bar'
-        };
-        
-        var data = [trace1, trace2, trace3, trace4];
-        
-        var layout = {barmode: 'stack'};
-        // figure out how to restyle plots
-        // Plotly.newPlot('myDiv', data, layout);
-    })
-    }
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-    if (dataset === 'color') {
-      d3.csv("graphing_csvs/colors.csv").then(function(dogData){
-        color = [];
-        adoption = [];
-        euthanasia = [];
-        transfer = [];
-        foster = [];
-        i = 0;
-        dogData.forEach(function(d){
-            color[i] = d.PrimaryColor;
-            adoption[i] = d.Adoption;
-            euthanasia[i] = d.Euthanasia;
-            transfer[i] = d.Transfer;
-            foster[i] = d.Foster;
-            i++;
-        });
-       
-        var trace1 = {
-          x: color,
-          y: adoption,
-          name: 'Adoption',
-          type: 'bar'
-        };
-        
-        var trace2 = {
-          x: color,
-          y: euthanasia,
-          name: 'Euthanasia',
-          type: 'bar'
-        };
-        var trace3 = {
-          x: color,
-          y: transfer,
-          name: 'Transfer',
-          type: 'bar'
-        };
-        var trace4 = {
-          x: color,
-          y: foster,
-          name: 'Foster',
-          type: 'bar'
-        };
-        
-        var data = [trace1, trace2, trace3, trace4];
-        
-        var layout = {barmode: 'stack'};
-        // figure out how to restyle plots
-        // Plotly.newPlot('myDiv', data, layout);
-    })
-    }
-  
-    // Note the extra brackets around 'x' and 'y'
-    // Plotly.restyle("plot", "x", [x]);
-    // Plotly.restyle("plot", "y", [y]);
+d3.selectAll("#selDataset").on("change", makePlot);
+
+function makePlot(){
+  var buttonClick = d3.select("#selDataset");
+  // Assign the value of the dropdown menu option to a variable
+  var dataset = buttonClick.property("value");
+
+  if (dataset === "breeds") {
+    csv_path = "graphing_csvs/breeds.csv"
+    var groups = d3.map(data, function(d){return(d.PrimaryBreed)}).keys()
   }
-  
-  init();
-  
+  else if (dataset === "gender") {
+    csv_path = "graphing_csvs/gender.csv"
+    var groups = d3.map(data, function(d){return(d.Sex)}).keys()
+  }
+  else if (dataset === "age group") {
+    csv_path = "graphing_csvs/age_group.csv"
+    var groups = d3.map(data, function(d){return(d["Age Group"])}).keys()
+  }
+  else if (dataset === "color") {
+    csv_path = "graphing_csvs/colors.csv"
+    var groups = d3.map(data, function(d){return(d.PrimaryColor)}).keys()
+  }
+  else {
+    console.log("error")
+  }
+
+// Parse the Data
+  d3.csv(csv_path, function(data) {
+
+  // List of subgroups = header of the csv files = soil condition here
+    var subgroups = [data.Adoption, data.Transfer, data.Foster, data.Euthanasia]
+
+  // Add X axis
+    var x = d3.scaleBand()
+        .domain(groups)
+        .range([0, width])
+        .padding([0.2])
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickSize(0));
+
+  // Add Y axis
+    var y = d3.scaleLinear()
+      .domain([0, 40])
+      .range([ height, 0 ]);
+    svg.append("g")
+      .call(d3.axisLeft(y));
+
+  // Another scale for subgroup position?
+    var xSubgroup = d3.scaleBand()
+      .domain(subgroups)
+      .range([0, x.bandwidth()])
+      .padding([0.05])
+
+  // color palette = one color per subgroup
+    var color = d3.scaleOrdinal()
+      .domain(subgroups)
+      .range(['#e41a1c','#377eb8','#4daf4a'])
+
+  // Show the bars
+    svg.append("g")
+      .selectAll("g")
+    // Enter in data = loop group per group
+      .data(data)
+      .enter()
+      .append("g")
+        .attr("transform", function(d) { return "translate(" + x(d.group) + ",0)"; })
+      .selectAll("rect")
+      .data(function(d) { return subgroups.map(function(key) { return {key: key, value: d[key]}; }); })
+      .enter().append("rect")
+        .attr("x", function(d) { return xSubgroup(d.key); })
+        .attr("y", function(d) { return y(d.value); })
+        .attr("width", xSubgroup.bandwidth())
+        .attr("height", function(d) { return height - y(d.value); })
+        .attr("fill", function(d) { return color(d.key); });
+
+})
+}

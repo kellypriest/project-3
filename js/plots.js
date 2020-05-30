@@ -112,7 +112,7 @@ function init() {
         
         var layout = {barmode: 'stack'};
         // figure out how to restyle plots
-        // Plotly.newPlot('myDiv', data, layout);
+        Plotly.newPlot('myDiv', data, layout);
     })
     }
 
