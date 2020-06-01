@@ -7,18 +7,22 @@ app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
 # prediction function 
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template ("index.html")
 
-@app.route('/home')
+@app.route('/')
 def home():
     return render_template ("home.html")
 
+@app.route('/viz')
+def viz():
+    return render_template ("viz.html")
+
 
 def ValuePredictor(to_predict_list): 
-    to_predict = np.array(to_predict_list).reshape(1, 6) 
-    loaded_model = pickle.load(open("model.pkl", "rb")) 
+    to_predict = np.array(to_predict_list).reshape(1, 52) 
+    loaded_model = pickle.load(open("rf_modelOneHot2.pkl", "rb")) 
     result = loaded_model.predict(to_predict) 
     return result[0] 
   
@@ -40,7 +44,7 @@ def result():
             outcome ='Accept'
         else: 
             outcome ='Expert Review Required'         
-        return render_template("result.html", prediction = prediction) 
+        return render_template("result.html", prediction = outcome) 
 
 if __name__ == '__main__':
    app.run(debug = True)

@@ -25,81 +25,86 @@
       <h3 class="form">Dog Intake Prediction Form</h3>
   <div>
     <form class="formPretty" action="/result" method="POST">
-      <label for="PetBreed">PetBreed</label>
-      <select id="PetBreed" name="PetBreed">
-        <option value="0">AMERICAN BULLDOG</option>
-        <option value="1">AMERICAN STAFFORDSHIRE TERRIER</option>
-        <option value="2">AUSTRALIAN CATTLE DOG</option>
-        <option value="3">AUSTRALIAN SHEPHERD</option>
-        <option value="4">BEAGLE</option>
-        <option value="5">BORDER COLLIE</option>
-        <option value="6">BOXER</option>
-        <option value="7">CHIHUAHUA</option>
-        <option value="8">CHOW CHOW</option>
-        <option value="9">COCKER SPANIEL</option>
-        <option value="10">DACHSHUND</option>
-        <option value="11">GERMAN SHEPHERD DOG</option>
-        <option value="12">GOLDEN RETRIEVER</option>
-        <option value="13">JACK RUSS TER</option>
-        <option value="14">LABRADOR RETRIEVER</option>
-        <option value="15">MINIATURE PINSCHER</option>
-        <option value="16">OTHER</option>
-        <option value="17">PIT BULL TERRIER</option>
-        <option value="18">POMERANIAN</option>
-        <option value="19">POODLE - MINIATURE</option>
-        <option value="20">PUG</option>
-        <option value="21">ROTTWEILER</option>
-        <option value="22">SCHNAUZER - MINIATURE</option>
-        <option value="23">SHIH TZU</option>
-        <option value="24">SIBERIAN HUSKY</option>
-        <option value="25">YORKSHIRE TERRIER</option>      
+      <label for="PrimaryColor">PrimaryColor</label>
+    <select id="PrimaryColor" name="PrimaryColor">
+      <option value="0">BLACK</option>
+      <option value="1">BLUE</option>
+      <option value="2">BRINDLE<BLACK/option>
+      <option value="3">BROWN</option>
+      <option value="4">MERLE</option>
+      <option value="5">RED</option>
+      <option value="6">SABLE</option>
+      <option value="7">TAN</option>
+      <option value="8">TICK</option>
+      <option value="9">TRICOLOR</option>
+      <option value="10">WHITE</option>
+      <option value="11">YELLOW</option>  
+    </select>  
+
+    <br>
+    <label for="BreedCategory">BreedCategory</label>
+      <select id="BreedCategory" name="BreedCategory">
+        <option value="12">MIX</option>
+        <option value="13">PURE</option>
+        <option value="14">TWO</option>   
       </select>
-      <br>
-       <label for="PrimaryColor">PrimaryColor</label>
-         <select id="PrimaryColor" name="PrimaryColor">
-           <option value="0">BLACK</option>
-           <option value="1">BLUE</option>
-           <option value="2">BRINDLE<BLACK/option>
-           <option value="3">BROWN</option>
-           <option value="4">MERLE</option>
-           <option value="5">RED</option>
-           <option value="6">SABLE</option>
-           <option value="7">TAN</option>
-           <option value="8">TICK</option>
-           <option value="9">TRICOLOR</option>
-           <option value="10">WHITE</option>
-           <option value="11">YELLOW</option>           
-         </select>  
-       <br>
-      <label for="BreedCategory">BreedCategory</label>
-        <select id="BreedCategory" name="BreedCategory">
-          <option value="0">Mix</option>
-          <option value="1">Pure</option>
-          <option value="2">Two</option>   
-        </select>
+
       <br>
       <label for="IntakeStatus">IntakeStatus</label>
-      <select id="IntakeStatus" name="eIntakeStatusdu">
-        <option value="1">Normal</option>
-        <option value="0">Aggressive</option>
-        <option value="3">Pregnant</option>
-        <option value="4">Sick</option>
-        <option value="2">Other</option>
-       </select>
-      <br>
-      <label for="PetAgeCategory">PetAgeCategory</label>
-      <select id="PetAgeCategory" name="PetAgeCategory">
-        <option value="1">Baby</option>
-        <option value="3">Young</option>
-        <option value="0">Adult</option>
-        <option value="2">Senior</option>
-      </select>
-      <br>
-      <label for="Sex">Sex</label>
-      <select id="Sex" name="Sex">
-        <option value="1">Male</option>
-        <option value="0">Female</option>
-      </select>
+      <select id="IntakeStatus" name="IntakeStatus">
+        <option value="16">NORMAL</option>  
+        <option value="15">AGGRESSIVE</option>
+        <option value="18">PREGNANT</option>
+        <option value="19">SICK</option>
+        <option value='17'>OTHER</option>
+        </select>
+        
+        <br>
+        <label for="PetAgeCategory">PetAgeCategory</label>
+        <select id="PetAgeCategory" name="PetAgeCategory">
+          <option value='21'>BABY</option>
+          <option value='23'>YOUNG</option>
+          <option value='20'>ADULT</option>
+          <option value='22'>SENIOR</option>
+        </select>
+
+        <br>
+        <label for="Sex">Sex</label>
+        <select id="Sex" name="Sex">
+          <option value='25'>MALE</option>
+          <option value='24'>FEMALE</option>
+        </select>
+
+        <br>
+        <label for="PetBreed">PetBreed</label>
+        <select id="PetBreed" name="PetBreed">
+           <option value="26">AMERICAN BULLDOG</option>
+           <option value="27">AMERICAN STAFFORDSHIRE TERRIER</option>
+           <option value="28">AUSTRALIAN CATTLE DOG</option>
+           <option value="29">AUSTRALIAN SHEPHERD</option>
+           <option value="30">BEAGLE</option>  
+           <option value="31">BORDER COLLIE</option>
+           <option value="32">BOXER</option>
+           <option value="33">CHIHUAHUA</option>
+           <option value="34">CHOW CHOW</option>
+           <option value="35">COCKER SPANIEL</option>
+           <option value="36">DACHSHUND</option>
+           <option value="37">GERMAN SHEPHERD DOG</option>
+           <option value="38">GOLDEN RETRIEVER</option>
+           <option value="39">JACK RUSS TER</option>
+           <option value="40">LABRADOR RETRIEVER</option>
+           <option value="41">MINIATURE PINSCHER</option>
+           <option value="43">PIT BULL TERRIER</option>
+           <option value="44">POMERANIAN</option>
+           <option value="45">POODLE - MINIATURE</option>
+           <option value="46">PUG</option>
+           <option value="47">ROTTWEILER</option>
+           <option value="48">SCHNAUZER - MINIATURE</option>
+           <option value="49">SHIH TZU</option>
+           <option value="50">SIBERIAN HUSKY</option>
+           <option value="51">YORKSHIRE TERRIER</option>  
+           <option value="42">OTHER</option>    
+         </select>
       <br>
       <br>
       <input type="submit" value="Submit">
