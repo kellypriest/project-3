@@ -5,11 +5,11 @@ import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 import re
-from numpy import loadtxt
-from keras.models import load_model
-import keras
-import h5py
-import tensorflow as tf 
+# from numpy import loadtxt
+# from keras.models import load_model
+# import keras
+# import h5py
+# import tensorflow as tf 
  
 app = Flask(__name__)
 
@@ -23,10 +23,11 @@ def ValuePredictor(to_predict_list):
     # model = tf.keras.models.load_model("NNmodelonehot.h5")
     
     # Random Forest pickled model (working)
+    model = pickle.load(open("rf_modelOneHot2.pkl", "rb"))
     # model = pickle.load(open("RFmodelonehot.pkl", "rb"))  
     
     # SVM pickled model (working)
-    model = pickle.load(open("SVMmodelonehot.pkl", "rb"))
+    # model = pickle.load(open("SVMmodelonehot.pkl", "rb"))
     result = model.predict(to_predict) 
     return result[0]
 
