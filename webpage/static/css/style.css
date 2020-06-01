@@ -30,9 +30,8 @@ nav{
     grid-column: 2/3;
     font-size: 24px;
 }
-#aboutProj{
-    grid-column: 2/3;
-    font-size: 20px;
+.aboutProj{
+    font-size: 10px;
 }
 .hamburger{
     justify-self: flex-end !important;
@@ -86,14 +85,6 @@ section {
 .projects{
     background: linear-gradient(to left, #0E490E, #060300);
 }
-.project1{
-    color: white;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    position: absolute;
-    transform: translate(-10%, -200%);
-    font-size: 20px;
-    text-shadow: 1px 1px 2px
-}
 
 .link1 {
     color: inherit;
@@ -122,8 +113,6 @@ body {
     transform: translate(0%, 0%);
 }
 
-
-
 .form{
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -134,14 +123,20 @@ body {
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
-.motivation{
+#motivation {
     color: white;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    transform: translate(0%, -500%);
 }
 .downYouGo{
     transform: translate(0%, 25%);
 }
 .moveBreed{
     transform: translate(0%, 500%);
+}
+#changeMoti {
+    margin-top: 100px;
+}
+#changeLink{
+    color: white;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }

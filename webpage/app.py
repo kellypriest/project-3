@@ -25,14 +25,21 @@ def ValuePredictor(to_predict_list):
 @app.route('/result', methods = ['POST']) 
 def result(): 
     if request.method == 'POST': 
-        to_predict_list = request.form.to_dict() 
+        to_predict_list = request.form.to_dict()
         to_predict_list = list(to_predict_list.values()) 
-        to_predict_list = list(map(int, to_predict_list)) 
-        result = ValuePredictor(to_predict_list)         
-        if int(result)== 1: 
-            prediction ='Take'
+        new_list=list(map(lambda x: int(x.replace(",", "")), to_predict_list))
+
+        zero_list = []
+        for x in range(52):
+            zero_list.append(0)
+        for x in new_list:
+            zero_list[x] = 1
+
+        result = ValuePredictor(zero_list)       
+        if result == 1: 
+            outcome ='Accept'
         else: 
-            prediction ='At risk of euthanisa'            
+            outcome ='Expert Review Required'         
         return render_template("result.html", prediction = prediction) 
 
 if __name__ == '__main__':
