@@ -9,29 +9,31 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-  <!-- <div class="breeds"></div> -->
-  
-  <!-- <div id="breedsper"></div> -->
+  <div><svg id="legend" height=300 width=450></svg></div>
   <div class="container-fluid">
 	<div class="row">
+        <h4>Breakdown by Breeds</h4>
 		<div class="col-md-6" id="breeds">
 		</div>
 		<div class="col-md-6" id="perb">
 		</div>
 	</div>
 	<div class="row">
+        <h4>Breakdown by Gender</h4>
 		<div class="col-md-6" id="gender">
 		</div>
 		<div class="col-md-6" id="perg">
 		</div>
 	</div>
 	<div class="row">
+        <h4>Breakdown by Color</h4>
 		<div class="col-md-6" id="colors">
 		</div>
 		<div class="col-md-6" id="perc">
 		</div>
 	</div>
 	<div class="row">
+        <h4>Breakdown by Age Group</h4>
 		<div class="col-md-6" id="age">
 		</div>
 		<div class="col-md-6" id="pera">
@@ -39,7 +41,7 @@
 	</div>
 </div>
  
-
+  <script type="text/javascript" src="legend.js"></script>
   <script type="text/javascript" src="d3plots.js"></script>
   <script type="text/javascript" src="percentplt.js"></script>
 </body>

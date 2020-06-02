@@ -9,7 +9,7 @@ var margin = {top: 10, right: 30, bottom: 20, left: 50},
 var svg5 = d3.select("#perb")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("height", height + margin.top + margin.bottom + 120)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
@@ -181,7 +181,7 @@ d3.csv("graphing_csvs/gender.csv", function(data) {
 var svg7 = d3.select("#perc")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("height", height + margin.top + margin.bottom + 60)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
