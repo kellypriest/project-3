@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Intake Model</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h3 id="Logo">Project 3 group</h3>
+            <a class="link1" href="{{ url_for('index') }}">
+                <h3 style="margin-left: 375px;" class="aboutMe">PREDICTION FORM</h3>
+            </a>
+            <a class="link1" href="{{ url_for('home') }}">
+            <img class="hamburger" src="../static/img/hamburger1.png" alt="hamburger">
+            </a>
+        </nav>
+        <section>
+            <div class="hero">
+                <img src="../static/img/new_dog.jpeg">
+                <h1 class="headline">Adoption Intake Model</h1>
+            </div>
+        </section>
+    </header>
+    <div class="slider"></div>
+    <main>
+        <section class="projects">
+            <div class="motivation">
+                <center>
+                <p style="color: white; font-size: 24px; margin-top: -150px; margin-left: 20px; margin-right: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">The animal rescue community is always trying to find ways to advocate for their animals. Shelters can easily become overwhelmed with the number of animals in their care, if they take on animals that their facility cannot easily place. We wanted to build a tool that could predict the outcome of an animal at a facility. Using dog outcome data from the Department of Animal Services in Louisville, Kentucky, we built a model that would let a rescue know to deny or accept a dog based on their predicted outcome. You can help solve this problem locally by donating or adopting at New Life Shelter <a style="color: white;" href="https://www.familydogsnewlife.org/donate">here.</a></a></p>
+                </center>
+            </div>
+            <div class="projectsLogo">
+                <center>
+                </center>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha256-ABrLsV2caVEMCBfm3eNhv/CYQG+tGCqzw2f4b/Pag0M=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha256-v/YsEqWkVsiNHryCWg+vjC/eDBakMAgOsCJRa0kNPOg=" crossorigin="anonymous"></script>
+    <script src="../static/js/app.js"></script>
+</body>
+</html>
