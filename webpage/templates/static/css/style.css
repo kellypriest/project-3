@@ -13,7 +13,7 @@
     z-index: -1;
 }
 .aboutMe {
-    margin-left: 425px;
+    margin-left: 100px;
     margin-top: 20px;
     object-fit: cover;
 }
@@ -121,7 +121,6 @@ body {
     font-size: 100px;
     transform: translate(0%, 0%);
 }
-
 
 
 .form{
