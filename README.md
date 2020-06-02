@@ -14,10 +14,10 @@
 
 
 ### Testing the Models
-<p>We tested the data with a variety of models and found that the neural network was best for our purposes. When testing the data we would see increases in acuracy if there were more rows of data. Also after some tuning of the categories we were able to increase our accuracy. 
+<p>We tested the data with a variety of models and found that the random forrest with one hot encoding was best for our purposes. When testing the data we would see increases in acuracy if there were more rows of data. Also after some tuning of the categories we were able to increase our accuracy. Overall the different machine learning models were similar accuracy. 
 
 ## Final 
-<p>For the final product we built a flask app and a website for a user to put in data into our predictive model. The model will then run the input and return deny or accept to the user to help make a decision on taking the dog into their care. There is also another page that visualizes the breakdown of adoption, euthanasia, transfer, and foster for each category; breeds, gender, colors, and age group. These graphs use data from both Louisville and Austin. Though using both datasets in our model did not work as the Louisville data was more complete; both did track the data we are visualizing in the bar graph. Using more data gives a better picture of the breakdown.
+<p>For the final product we built a flask app and a website for a user to put in data into our predictive model. The model will then run the input and return deny or accept to the user to help make a decision on taking the dog into their care. There is also another page not a part of the site (yet!) that visualizes the breakdown of adoption, euthanasia, transfer, and foster for each category; breeds, gender, colors, and age group. These graphs use data from both Louisville and Austin. Though using both datasets in our model did not work as the Louisville data was more complete; both did track the data we are visualizing in the bar graph. Using more data gives a better picture of the breakdown.
 
 ## Thoughts
 <p>This project highlighted the need for a standardize database for rescues to use to track intake and outcome data. We wanted our project to show that there is this hole in data tracking. Our future goals with our website is to make it a system for rescues to track their data and feed that data into our model to make the model stronger. Also to make a predicitive model and data tracking system for other species of animals in rescue.
